@@ -1,0 +1,157 @@
+<p>As a PHP developer for over ten years, I can’t help by compare its syntax with Python when I started learning the latter recently. I anticipate this page will be a perpetual work in progress…</p>
+
+<h2 id="variable-names">Variable names</h2>
+
+<p>PHP – ‘$’ in front of variable names.  E.g.,</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">$str = 'abc';</pre>
+
+<p>Python – No ‘$’ in front of variable names.  E.g.,</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">str = 'abc'</pre>
+
+<p> </p>
+
+<h2 id="semicolons">Semicolons</h2>
+
+<p>PHP – Must have a semicolon to end each line of code. E.g.,</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">$str = 'abc';&lt;/pre&gt;
+&lt;pre&gt;$str2 = 'def';&lt;/pre&gt;
+&lt;pre&gt;</pre>
+
+<p>Python – Each line must be ended with a newline.  E.g.,</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">str = 'abc'
+str2 = 'def'</pre>
+
+<p> </p>
+
+<h2 id="if-statements">‘If’ statements</h2>
+
+<p>PHP</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">if ($city == "Charlotte"):
+  return 183;
+elseif ($city == "Tampa"):
+  return 220;
+else:
+  return 475;
+endif;
+</pre>
+
+<p>Python</p>
+
+<p>– IMPORTANT: The indent must be 4 spaces.</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">if city == "Charlotte":
+        return 183
+    elif city == "Tampa":
+        return 220
+    else:
+        return 475
+</pre>
+
+<p> </p>
+
+<h2 id="functions">Functions</h2>
+
+<p>PHP</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">function render($arg = NULL) {
+}
+</pre>
+
+<p>Python</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">def render(arg):
+</pre>
+
+<h2 id="arrays-in-php--lists-in-python">Arrays in PHP = Lists in Python</h2>
+
+<p>PHP</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">$array = ['a', 2, 'c'];</pre>
+
+<p>Python</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">array = ['a', 2, 'c']</pre>
+
+<h2 id="associative-arrays-in-php--dictionaries-in-python">Associative arrays in PHP = Dictionaries in Python</h2>
+
+<p>PHP</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">$array = [
+    "foo" =&gt; "bar",
+    "bar" =&gt; ['flint', 'twine', 'gemstone'],
+];
+</pre>
+
+<p>Python (Syntax is very similar to JSON)</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">array = {
+    'foo' : 'bar',
+    'bar' : ['flint', 'twine', 'gemstone']
+}
+</pre>
+
+<h2 id="for-loop">For loop</h2>
+
+<p>PHP</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">foreach ($arr as $value) {
+}
+</pre>
+
+<p>Python</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">for value in arr:
+</pre>
+
+<h2 id="phps-implode--pythons-join">PHP’s implode = Python’s join</h2>
+
+<p>PHP</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">$s = "-";
+$seq = ("a", "b", "c"); # This is sequence of strings.
+print implode($s, $seq); # Will print a-b-c
+</pre>
+
+<p>Python</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">s = "-"
+seq = ("a", "b", "c") # This is sequence of strings.
+print s.join( seq ) # Will print a-b-c
+</pre>
+
+<h2 id="-operatorh2-source-php---uses-double--python---uses-single--source">&amp; operator&lt;/h2 [source] PHP - Uses double &amp; Python - Uses single &amp; [/source]</h2>
+
+<h2 id="constructors">Constructors</h2>
+
+<p>PHP</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">function __construct()</pre>
+
+<p>Python</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">def __init__(self)</pre>
+
+<p>Inheritance</p>
+
+<p>PHP</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">class Bar extends Foo</pre>
+
+<p>Python</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">class Bar(Foo)</pre>
+
+<p>Parent class</p>
+
+<p>PHP</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">parent::foo()</pre>
+
+<p>Python</p>
+
+<p>super(bar(), self).foo()</p>

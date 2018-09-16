@@ -1,0 +1,25 @@
+<p>The Reduce method reduces an array into a single value by applying a callback function to each element in the array, starting with the leftmost to the rightmost element.</p>
+
+<p>As a simple example, we could use reduce() to find the sum of all the numbers in an array.</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">const numbers = [3, 2, 5, 7, 8, 10];
+const sum = numbers.reduce(function (total, item) {
+  return total + item;
+});
+// Returns 35
+</pre>
+
+<p>In ES6 syntax,</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">const numbers = [3, 2, 5, 7, 8, 10];
+const sum = numbers.reduce((total, item) =&gt; total + item);
+// Returns 35
+</pre>
+
+<p>More great examples of the Reduce method:</p>
+
+<p>https://medium.freecodecamp.org/reduce-f47a7da511a9</p>
+
+<p>Full documentation:</p>
+
+<p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce</p>

@@ -1,0 +1,77 @@
+<p>See all local branches</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git branch
+</pre>
+
+<p>See all remote branches</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git branch -r
+</pre>
+
+<p>See all branches</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git branch -a
+</pre>
+
+<p>Clone a git repo</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git clone [url]
+</pre>
+
+<p>Create a local branch from remote and switch to it</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git checkout -b &lt;branch&gt; &lt;remote&gt;/&lt;branch&gt;
+</pre>
+
+<p>List the current configured remote repository for your fork.</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git remote -v
+</pre>
+
+<p>List recent commits</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git log
+</pre>
+
+<p>Add a new remote upstream repository</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git remote add upstream [url]
+</pre>
+
+<p>See what files are changed</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git status
+</pre>
+
+<p>See only changes that have already been added to the Staging Area</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git diff --staged
+</pre>
+
+<p>Show unstaged changes</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git diff
+</pre>
+
+<p>Push to remote</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git push &lt;remote&gt; &lt;branch&gt;
+</pre>
+
+<p>Check out pull requests locally</p>
+
+<p>In .git/config add this under the [remote “upstream”] section</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">fetch = +refs/pull/*/head:refs/remotes/origin/pr/*:
+</pre>
+
+<p>To check out a particular pull request:</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">git checkout pr/999
+</pre>
+
+<p>Excellent Git resources</p>
+
+<p>https://services.github.com/on-demand/downloads/github-git-cheat-sheet/</p>
+
+<p>https://www.git-tower.com/learn/git/ebook/en/command-line/introduction#start</p>

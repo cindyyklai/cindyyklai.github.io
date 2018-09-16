@@ -1,0 +1,37 @@
+<p>If you’re new to Bower, <a href="https://www.codementor.io/bower/tutorial/beginner-tutorial-getting-started-bower-package-manager">codementor</a> has a great beginners guide. It gives you an introduction of what Bower is and walks you through the installation process.</p>
+
+<ol>
+  <li>Download node from <a href="https://nodejs.org/en/">nodejs.org</a>.</li>
+  <li>Install Bower &lt;pre class="brush: plain; title: ; notranslate" title=""&gt;sudo npm install -g bower&lt;/pre&gt;</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Note: I tried running the command without sudo and got the following error, and after searching on the web, found that it needs to be run with root access or permissions to install Bower globally.
+
+&lt;pre class="brush: plain; title: ; notranslate" title=""&gt;Please try running this command again as root/Administrator.&lt;/pre&gt;
+</code></pre></div></div>
+
+<ol>
+  <li>As an example, use Bower to install jQuery. Navigate to your site root and run the following command:&lt;/p&gt; &lt;pre class="brush: plain; title: ; notranslate" title=""&gt;$ bower install jquery&lt;/pre&gt;</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Note: To install a specific version, you can use
+
+&lt;pre class="brush: plain; title: ; notranslate" title=""&gt;bower install bootstrap#version_number&lt;/pre&gt;
+
+Here&amp;#8217;s the output
+  
+`&lt;br /&gt; ? May bower anonymously report usage statistics to improve the tool over time? (Y/n) bower jquery#*              not-cached git://github.com/jquery/jquery.git#*&lt;br /&gt; bower jquery#*                 resolve git://github.com/jquery/jquery.git#*&lt;br /&gt; bower jquery#*                download https://github.com/jquery/jquery/archive/2.1.4.tar.gz&lt;br /&gt; bower jquery#*                 extract archive.tar.gz&lt;br /&gt; bower jquery#*                resolved git://github.com/jquery/jquery.git#2.1.4&lt;br /&gt; bower jquery#~2.1.4            install jquery#2.1.4&lt;/p&gt;
+</code></pre></div></div>
+<p>jquery#2.1.4 bower_components/jquery<br />
+` 
+    
+    Bower installed the package into a newly created folder called &#8216;bower_components&#8217;.
+  
+    ![Bower components](http://cindylai.net/wp-content/uploads/2015/11/post_35_a.png)&lt;/li&gt; 
+    
+      * To update the package, just run this command:</p>
+<pre class="brush: plain; title: ; notranslate" title="">$ bower update jquery</pre>
+<p>&lt;/ol&gt;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>That&amp;#8217;s it! Of course, there&amp;#8217;s more to it. There are some really useful tips and tricks in this [article at CSS-Tricks](https://css-tricks.com/whats-great-bower/) that I can&amp;#8217;t wait to try. And the list of all the commands can be found on the [Bower API site](http://bower.io/docs/api/).
+</code></pre></div></div>

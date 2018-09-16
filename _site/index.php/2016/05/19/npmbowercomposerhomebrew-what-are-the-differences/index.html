@@ -1,0 +1,29 @@
+<p>For a while, I have been confused with all the different package managers that are floating around. NPM, Bower, Composer, Homebrew are some of the popular ones that I have used at work. So what are they and how do they differ from each other?</p>
+
+<ul>
+  <li>npm – Package manager for nodes. It comes with nodejs (<a href="http://cindylai.net/index.php/2016/02/04/what-exactly-is-node-js/">What exactly is nodejs?</a>).</li>
+  <li>bower – Package manager for front-end web projects. It manages components that contain HTML, CSS, JavaScript, fonts or even image files. It is also an npm package (You will need npm and nodejs to install bower and to execute it. See <a href="http://cindylai.net/index.php/2015/11/05/getting-started-with-bower/">Getting started with Bower</a>.)</li>
+  <li>composer – Dependency manager for php projects (I have used this to install/update dependencies for Drupal sites)</li>
+  <li>Homebrew – Package manager for Mac OS X</li>
+</ul>
+
+<p>And here is one of the ways how they cross paths with each other:</p>
+
+<p>1) Install Homebrew (I use a Mac)</p>
+
+<p>2) Use Homebrew to install node (It can also be downloaded from https://nodejs.org/en/, in that case – skip Step 1)</p>
+
+<p>3) Install Bower with npm</p>
+
+<p><code class="highlighter-rouge">npm install -g bower</code></p>
+
+<p>4) Install jQuery with Bower</p>
+
+<p><code class="highlighter-rouge">bower install jquery</code></p>
+
+<p>Please note that Bower is not needed to install Javascript libraries – NPM can do the same. There are some articles on the web that talk about the drawbacks of using Bower:</p>
+
+<ul>
+  <li>https://gofore.com/stop-using-bower/</li>
+  <li>https://medium.com/@nickheiner/why-my-team-uses-npm-instead-of-bower-eecfe1b9afcb#.gm5edekzx</li>
+</ul>

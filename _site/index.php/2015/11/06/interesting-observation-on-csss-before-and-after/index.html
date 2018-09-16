@@ -1,0 +1,47 @@
+<p>Suppose we have these HTML elements:</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">&lt;div class="element1"&gt;Element1&lt;/div&gt;
+&lt;div class="element2"&gt;Element2&lt;/div&gt;
+</pre>
+
+<p>And suppose this is the CSS:</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">.element1, .element2 {
+    display: inline;
+}
+.element1:before {
+    content: '#';
+  }
+.element2:after {
+    content: '#';
+  }
+</pre>
+
+<p>We can expect to see two #’s between element1 and element2.</p>
+
+<p>Now, change the #’s to spaces.</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">.element1, .element2 {
+    display: inline;
+}
+.element1:before {
+    content: ' ';
+  }
+.element2:after {
+    content: ' ';
+  }
+</pre>
+
+<p>Surprisingly, it only inserts one space between the elements. This can be handy when trying to ensure that there’s always a space between two elements. If one of this elements is not present, then the space is omitted. If you want to enforce two blank spaces between them, use ‘\00a0’.</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">.element1, .element2 {
+    display: inline;
+}
+.element2:before {
+    content: '&#92;&#48;0a0';
+  }
+
+  .element1:after {
+    content: '&#92;&#48;0a0';
+  }
+</pre>

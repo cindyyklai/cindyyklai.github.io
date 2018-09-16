@@ -1,0 +1,42 @@
+<p>When working on a project last year, I was introduced to this handy feature in Git – git bisect.  According to https://git-scm.com/docs/git-bisect, it allows you to:</p>
+
+<blockquote>
+  <p>Use binary search to find the commit that introduced a bug</p>
+</blockquote>
+
+<p>It is pretty straightforward to use it:</p>
+
+<ol>
+  <li>
+    <p>Initiate a bisect session 
+    &lt;pre&gt;$ git bisect start&lt;/pre&gt;</p>
+  </li>
+  <li>
+    <p>Specify a good commit 
+    &lt;pre&gt;$ git bisect good d89ec&lt;/pre&gt;</p>
+  </li>
+  <li>
+    <p>Specify a bad commit 
+    &lt;pre&gt;$ git bisect bad 96cac&lt;/pre&gt;</p>
+  </li>
+  <li>
+    <p>At this point, Git will output something like this: 
+    &lt;pre&gt;Bisecting: 6 revisions left to test after this (roughly 3 steps)&lt;/pre&gt;</p>
+  </li>
+  <li>
+    <p>Test your site, if it looks good, type: 
+    &lt;pre&gt;$ git bisect good&lt;/pre&gt;</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Otherwise,
+
+&lt;pre&gt;$ git bisect good&lt;/pre&gt;
+</code></pre></div></div>
+
+<ol>
+  <li>Now git will output something like:Bisecting: 3 revisions left to test after this (roughly 2 steps)</li>
+  <li>Repeat Step 5 until there’s git says something like this:d89ecffb672c142cadbbaeef5e31597aac6ecf06 is the first bad commit</li>
+</ol>
+
+<p> </p>

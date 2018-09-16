@@ -1,0 +1,9 @@
+<p>To download plugins and the required dependencies, run this command:</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">mvn org.apache.maven.plugins:maven-dependency-plugin:2.6:get -Dartifact=groupId:artifactId:version</pre>
+
+<p>For example, to download versions-maven-plugin:</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">mvn org.apache.maven.plugins:maven-dependency-plugin:2.6:get -Dartifact=org.codehaus.mojo:versions-maven-plugin:2.3 -DrepoUrl=https://github.com/mojohaus/versions-maven-plugin</pre>
+
+<p>If the plugins need to be installed manually, refer to <a href="http://maven.apache.org/plugins/maven-install-plugin/examples/custom-pom-installation.html">this documentation on the Apache Maven project site</a>.</p>

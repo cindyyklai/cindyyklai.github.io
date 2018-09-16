@@ -1,0 +1,16 @@
+<p>Recently I was helping a coworker to set up his drush and we ran into this problem:</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">Drush was not able to start (bootstrap) the Drupal [error]
+database.
+</pre>
+
+<p>After hours of troubleshooting, I added these lines to his .bash_profile, as suggested by this this post:</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5.5.10/bin:$PATH"
+
+export PATH
+export DRUSH_PHP="/Applications/MAMP/bin/php/php5.5.10/bin/php"
+export PATH=/usr/local/bin:$PATH
+</pre>
+
+<p>And voila, it’s working!</p>

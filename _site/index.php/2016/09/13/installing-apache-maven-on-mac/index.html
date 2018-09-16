@@ -1,0 +1,24 @@
+<p>While the <a href="https://maven.apache.org/install.html">installation guide on Apache</a> is helpful, I decided to document the exact steps (some are not covered on the Apache site) I took to get Apache Maven installed in my machine.</p>
+
+<ol>
+  <li>
+    <p>Add JAVA_HOME environment variable to .bash_profile&lt;/p&gt; &lt;pre class="brush: plain; title: ; notranslate" title=""&gt;export JAVA_HOME=$(/usr/libexec/java_home)&lt;/pre&gt;</p>
+  </li>
+  <li>
+    <p>Reload .bash_profile by running:&lt;/p&gt; &lt;pre class="brush: plain; title: ; notranslate" title=""&gt;. ~/.bash_profile&lt;/pre&gt;</p>
+  </li>
+  <li>Download the Apache Maven distribution archive from <a href="https://maven.apache.org/download.cgi">here</a>.</li>
+  <li>Add the bin directory to the PATH environment variable.</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In, .bashrc, add:&lt;/p&gt; &lt;pre class="brush: plain; title: ; notranslate" title=""&gt;export PATH=/path/to/apache/maven-3.3.9/bin:$PATH&lt;/pre&gt;
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>Reload .bashrc by running:&lt;/p&gt; &lt;pre class="brush: plain; title: ; notranslate" title=""&gt;. ~/bashrc&lt;/pre&gt;</p>
+  </li>
+  <li>
+    <p>Type the following the confirm Maven has been installed successfully:&lt;/p&gt; &lt;pre class="brush: plain; title: ; notranslate" title=""&gt;mvn -v&lt;/pre&gt;</p>
+  </li>
+</ol>

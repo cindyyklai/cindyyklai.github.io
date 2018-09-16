@@ -1,0 +1,5 @@
+<p>RewriteEngine On</p>
+
+<p>RewriteCond %{HTTPS} off</p>
+
+<p>RewriteRule <code class="highlighter-rouge">&lt;span class="pun"&gt;^(.*)&lt;/span&gt;&lt;span class="pln"&gt;$ https&lt;/span&gt;&lt;span class="pun"&gt;:&lt;/span&gt;&lt;span class="com"&gt;//%{SERVER_NAME}%{REQUEST_URI} [L,R]&lt;/span&gt;</code></p>

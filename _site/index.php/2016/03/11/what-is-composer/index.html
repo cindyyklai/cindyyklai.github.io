@@ -1,0 +1,39 @@
+<p>Summarized from this <a href="https://semaphoreci.com/community/tutorials/getting-started-with-composer-for-php-dependency-management">article</a>:</p>
+
+<p>– PEAR installs dependencies globally and Composer installs them locally, in your project structure.</p>
+
+<p>– PEAR is essentially a package manager and Composer is a dependency manager.</p>
+
+<p>To install Composer, run:</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">curl -sS https://getcomposer.org/installer | php
+</pre>
+
+<p>To configure Composer:</p>
+
+<p>– Create a file named composer.json in project root.</p>
+
+<p>– Add dependencies to composer.json like this:</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">{
+  "require": {
+    "php": "&gt;5.4.2",
+    "other_dependency": "~1.0"
+  }
+}
+</pre>
+
+<p>To install dependencies as specified in composer.json:</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">php composer.phar install -v
+</pre>
+
+<p>To update dependencies:</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">php composer.phar update
+</pre>
+
+<p>To update a single library:</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">composer.phar update doctrine/doctrine-fixtures-bundle
+</pre>

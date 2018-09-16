@@ -1,0 +1,22 @@
+<p>Traits are a group of functions that can be included in other classes. For example,</p>
+
+<pre class="brush: plain; title: ; notranslate" title="">trait A {
+    public function test() {
+        print 'HELLO';
+    }
+}
+
+class B {
+    use A;
+}
+
+class C {
+    use A;
+}
+
+$b = new B();
+$b-&gt;test(); // Will print 'Hello'.
+
+$c = new C();
+$c-&gt;test(); // Will print 'Hello'.
+</pre>

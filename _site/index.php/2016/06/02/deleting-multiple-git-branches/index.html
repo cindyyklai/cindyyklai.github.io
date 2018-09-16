@@ -1,0 +1,29 @@
+<p>Here’s something new I learned today. I was trying to clean up some stale branches but Tower only deletes one at a time even if you selected multiple of them! Well, that’s annoying. So I started searching on the internet and this seems to work:</p>
+
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>List all the branches that have the ‘PREFIX’ prefix. This is just to preview the list before deleting it. &lt;pre class="brush: plain; title: ; notranslate" title=""&gt;$ git branch -r</td>
+          <td>awk -F/ ‘/\/PREFIX/{print $2}’&lt;/pre&gt;</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Note: -r shows all the remote branches. -a shows both local and remote.&lt;/li&gt; 
+
+  * If it looks good, delete away! (Scroll to see the command as it is pretty long) &lt;pre class="brush: plain; title: ; notranslate" title=""&gt;$ git branch -r | awk -F/ '/\/PREFIX/{print $2}' | xargs -I {} git push origin :{}&lt;/pre&gt;
+    
+    Note: As of Git v1.5.0, you can also delete a remote branch using:
+    
+    &lt;pre class="brush: plain; title: ; notranslate" title=""&gt;$ git push origin --delete &amp;lt;branchname&amp;gt;&lt;/pre&gt;
+
+  * Remove local reference to those remote branches. &lt;pre class="brush: plain; title: ; notranslate" title=""&gt;$ git remote prune origin&lt;/pre&gt;
+    
+    or
+    
+    &lt;pre class="brush: plain; title: ; notranslate" title=""&gt;$ git branch -D &amp;lt;branch1&amp;gt; &amp;lt;branch2&amp;gt; &amp;lt;branch3&amp;gt; &lt;/pre&gt;&lt;/ol&gt;
+</code></pre></div></div>
